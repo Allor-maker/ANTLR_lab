@@ -165,18 +165,18 @@ public:
         }
 
         auto& value = it->second;
-
+        std::variant<int, float> result;
         if (std::holds_alternative<int>(value)) {
             int& int_val = std::get<int>(value);
-            int tmp = int_val;
+            result = int_val;
             int_val++;
-            return tmp;
+            return result;
         }
         else if (std::holds_alternative<float>(value)) {
             float& float_val = std::get<float>(value);
-            float tmp = float_val;
+            result = float_val;
             float_val++;
-            return tmp;
+            return result;
         }
         else {
             throw std::runtime_error("Ошибка: не поддерживаемый тип переменной.");
@@ -192,18 +192,18 @@ public:
         }
 
         auto& value = it->second;
-
+        std::variant<int, float> result;
         if (std::holds_alternative<int>(value)) {
             int& int_val = std::get<int>(value);
-            int tmp = int_val;
+            result = int_val;
             int_val--;
-            return tmp;
+            return result;
         }
         else if (std::holds_alternative<float>(value)) {
             float& float_val = std::get<float>(value);
-            float tmp = float_val;
+            result = float_val;
             float_val--;
-            return tmp;
+            return result;
         }
         else {
             throw std::runtime_error("Ошибка: не поддерживаемый тип переменной.");
@@ -219,16 +219,18 @@ public:
         }
 
         auto& value = it->second;
-
+        std::variant<int, float> result;
         if (std::holds_alternative<int>(value)) {
             int& int_val = std::get<int>(value);
             ++int_val;
-            return int_val;
+            result = int_val;
+            return result;
         }
         else if (std::holds_alternative<float>(value)) {
             float& float_val = std::get<float>(value);
             ++float_val;
-            return float_val;
+            result = float_val;
+            return result;
         }
         else {
             throw std::runtime_error("Ошибка: не поддерживаемый тип переменной.");
@@ -244,16 +246,18 @@ public:
         }
 
         auto& value = it->second;
-
+        std::variant<int, float> result;
         if (std::holds_alternative<int>(value)) {
             int& int_val = std::get<int>(value);
             --int_val;
-            return int_val;
+            result = int_val;
+            return result;
         }
         else if (std::holds_alternative<float>(value)) {
             float& float_val = std::get<float>(value);
             --float_val;
-            return float_val;
+            result = float_val;
+            return result;
         }
         else {
             throw std::runtime_error("Ошибка: не поддерживаемый тип переменной.");

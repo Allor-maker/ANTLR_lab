@@ -1,0 +1,21 @@
+int i;
+i = 0;
+int limit;
+limit = 2;
+int sum;
+int j;
+while (i < limit) {
+    print(i);
+    j = 0;
+    while (j < limit) {
+        print(j);
+        if (i == 0 || j == 1) {
+            sum = i + j + 100;
+            print(sum);
+        }
+        j++;
+    }
+    i++;
+}
+print(i); 
+print(limit);

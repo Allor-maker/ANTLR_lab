@@ -1,0 +1,28 @@
+float pi;
+pi = 3.14;
+print(pi);
+
+float radius;
+radius = 2.0;
+print(radius);
+
+float area;
+area = pi * radius * radius;
+print(area);
+
+int check;
+check = 10;
+if (area > 10.0 && check == 10) {
+    print(1);
+    check = (check + 5) * 2;
+    print(check);
+} else {
+    print(0);
+}
+
+if (!(check == 30)) {
+    print(888);
+} else {
+    print(999);
+}
+print(check);
