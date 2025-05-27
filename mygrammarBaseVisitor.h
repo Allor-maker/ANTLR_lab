@@ -89,7 +89,7 @@ public:
             return variables[var];
         }
         else {
-            throw std::runtime_error("Ошибка: переменная '" + var + "' не определена.");
+            throw std::runtime_error("Error: varibale '" + var + "' is not inited yet.");
         }
     }
 
@@ -122,7 +122,7 @@ public:
         if (op == ">=") return left_val >= right_val;
         if (op == "==") return std::fabs(left_val - right_val) < 1e-6;
 
-        throw std::runtime_error("Неизвестный оператор сравнения");
+        throw std::runtime_error("Undefined comparison operator");
     }
 
     virtual std::any visitOrExpr(mygrammarParser::OrExprContext* ctx) override {
@@ -139,7 +139,7 @@ public:
 
         auto it = variables.find(var);
         if (it == variables.end()) {
-            throw std::runtime_error("Ошибка: переменная '" + var + "' не определена.");
+            throw std::runtime_error("Error: variable '" + var + "' is not inited yet.");
         }
 
         auto value_variant = std::any_cast<std::variant<int, float>>(result);
@@ -151,7 +151,7 @@ public:
             variables[var] = std::get<float>(value_variant);
         }
         else {
-            throw std::runtime_error("Ошибка: неподдерживаемый тип переменной.");
+            throw std::runtime_error("Error: unsupported variable type.");
         }
     }
 
@@ -161,7 +161,7 @@ public:
 
         auto it = variables.find(name);
         if (it == variables.end()) {
-            throw std::runtime_error("Ошибка: переменная '" + name + "' не определена.");
+            throw std::runtime_error("Error: variable '" + name + "' is not inited yet.");
         }
 
         auto& value = it->second;
@@ -179,7 +179,7 @@ public:
             return result;
         }
         else {
-            throw std::runtime_error("Ошибка: не поддерживаемый тип переменной.");
+            throw std::runtime_error("Error: unsupported variable type.");
         }
     }
 
@@ -188,7 +188,7 @@ public:
 
         auto it = variables.find(name);
         if (it == variables.end()) {
-            throw std::runtime_error("Ошибка: переменная '" + name + "' не определена.");
+            throw std::runtime_error("Error: variable '" + name + "' is not inited yet.");
         }
 
         auto& value = it->second;
@@ -206,7 +206,7 @@ public:
             return result;
         }
         else {
-            throw std::runtime_error("Ошибка: не поддерживаемый тип переменной.");
+            throw std::runtime_error("Error: unsupported variable type.");
         }
     }
 
@@ -215,7 +215,7 @@ public:
 
         auto it = variables.find(name);
         if (it == variables.end()) {
-            throw std::runtime_error("Ошибка: переменная '" + name + "' не определена.");
+            throw std::runtime_error("Error: variable '" + name + "' is not inited yet.");
         }
 
         auto& value = it->second;
@@ -233,7 +233,7 @@ public:
             return result;
         }
         else {
-            throw std::runtime_error("Ошибка: не поддерживаемый тип переменной.");
+            throw std::runtime_error("Error: unsupported variable type.");
         }
     }
 
@@ -242,7 +242,7 @@ public:
 
         auto it = variables.find(name);
         if (it == variables.end()) {
-            throw std::runtime_error("Ошибка: переменная '" + name + "' не определена.");
+            throw std::runtime_error("Error: variable '" + name + "' is not inited yet.");
         }
 
         auto& value = it->second;
@@ -260,7 +260,7 @@ public:
             return result;
         }
         else {
-            throw std::runtime_error("Ошибка: не поддерживаемый тип переменной.");
+            throw std::runtime_error("Error: unsupported variable type.");
         }
     }
 
@@ -271,7 +271,7 @@ public:
         auto it = variables.find(name);
         if (it != variables.end())
         {
-            throw std::runtime_error("Ошибка: переменная '" + name + "' уже определена.");
+            throw std::runtime_error("Error: variable '" + name + "' already inited.");
         }
         if (type == "int") {
             variables[name] = 0;
@@ -280,7 +280,7 @@ public:
             variables[name] = 0.0f;
         }
         else {
-            throw std::runtime_error("Неизвестный тип переменной.");
+            throw std::runtime_error("Error: unsupported variable type.");
         }
 
         return 0;
