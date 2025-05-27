@@ -33,6 +33,8 @@ public:
 
     virtual std::any visitMulExpr(mygrammarParser::MulExprContext *context) = 0;
 
+    virtual std::any visitDivExpr(mygrammarParser::DivExprContext *context) = 0;
+
     virtual std::any visitParenExpr(mygrammarParser::ParenExprContext *context) = 0;
 
     virtual std::any visitNameExpr(mygrammarParser::NameExprContext *context) = 0;

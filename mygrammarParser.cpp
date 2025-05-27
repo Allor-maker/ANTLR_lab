@@ -57,68 +57,69 @@ void mygrammarParserInitialize() {
       "line", "code"
     },
     std::vector<std::string>{
-      "", "'('", "')'", "'*'", "'&&'", "'||'", "'!'", "'++'", "'--'", "'{'", 
-      "'}'", "", "';'", "'='", "", "", "", "", "", "'if'", "'else'", "'while'", 
-      "'print'", "'def'"
+      "", "'('", "')'", "'*'", "'/'", "'&&'", "'||'", "'!'", "'++'", "'--'", 
+      "'{'", "'}'", "", "';'", "'='", "", "", "", "", "", "'if'", "'else'", 
+      "'while'", "'print'", "'def'"
     },
     std::vector<std::string>{
-      "", "", "", "", "", "", "", "", "", "", "", "WS", "SEP", "ASSIGN", 
+      "", "", "", "", "", "", "", "", "", "", "", "", "WS", "SEP", "ASSIGN", 
       "TYPE", "INT", "FLOAT", "COMP", "ADDSUB", "IF", "ELSE", "WHILE", "PRINT", 
       "DEF", "NAME"
     }
   );
   static const int32_t serializedATNSegment[] = {
-  	4,1,24,167,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,
+  	4,1,25,170,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,
   	7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,1,0,1,0,1,0,1,0,1,
-  	0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,3,0,39,8,0,1,0,1,0,1,0,1,0,1,0,1,0,5,0,
-  	47,8,0,10,0,12,0,50,9,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,
-  	1,63,8,1,1,1,1,1,1,1,1,1,1,1,1,1,5,1,71,8,1,10,1,12,1,74,9,1,1,2,1,2,
-  	1,2,1,2,1,3,1,3,1,3,1,4,1,4,1,4,1,5,1,5,1,5,1,6,1,6,1,6,1,7,1,7,1,7,1,
-  	8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,
-  	1,8,1,8,3,8,115,8,8,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,
-  	10,1,10,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,
-  	11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,3,11,151,8,11,1,12,1,12,1,
-  	12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,3,12,165,8,12,1,12,0,
-  	2,0,2,13,0,2,4,6,8,10,12,14,16,18,20,22,24,0,0,178,0,38,1,0,0,0,2,62,
-  	1,0,0,0,4,75,1,0,0,0,6,79,1,0,0,0,8,82,1,0,0,0,10,85,1,0,0,0,12,88,1,
-  	0,0,0,14,91,1,0,0,0,16,114,1,0,0,0,18,116,1,0,0,0,20,124,1,0,0,0,22,150,
-  	1,0,0,0,24,164,1,0,0,0,26,27,6,0,-1,0,27,28,5,1,0,0,28,29,3,0,0,0,29,
-  	30,5,2,0,0,30,39,1,0,0,0,31,39,5,24,0,0,32,39,5,15,0,0,33,39,5,16,0,0,
-  	34,39,3,6,3,0,35,39,3,8,4,0,36,39,3,12,6,0,37,39,3,10,5,0,38,26,1,0,0,
-  	0,38,31,1,0,0,0,38,32,1,0,0,0,38,33,1,0,0,0,38,34,1,0,0,0,38,35,1,0,0,
-  	0,38,36,1,0,0,0,38,37,1,0,0,0,39,48,1,0,0,0,40,41,10,9,0,0,41,42,5,3,
-  	0,0,42,47,3,0,0,10,43,44,10,8,0,0,44,45,5,18,0,0,45,47,3,0,0,9,46,40,
-  	1,0,0,0,46,43,1,0,0,0,47,50,1,0,0,0,48,46,1,0,0,0,48,49,1,0,0,0,49,1,
-  	1,0,0,0,50,48,1,0,0,0,51,52,6,1,-1,0,52,53,3,0,0,0,53,54,5,17,0,0,54,
-  	55,3,0,0,0,55,63,1,0,0,0,56,57,5,6,0,0,57,63,3,2,1,2,58,59,5,1,0,0,59,
-  	60,3,2,1,0,60,61,5,2,0,0,61,63,1,0,0,0,62,51,1,0,0,0,62,56,1,0,0,0,62,
-  	58,1,0,0,0,63,72,1,0,0,0,64,65,10,4,0,0,65,66,5,4,0,0,66,71,3,2,1,5,67,
-  	68,10,3,0,0,68,69,5,5,0,0,69,71,3,2,1,4,70,64,1,0,0,0,70,67,1,0,0,0,71,
-  	74,1,0,0,0,72,70,1,0,0,0,72,73,1,0,0,0,73,3,1,0,0,0,74,72,1,0,0,0,75,
-  	76,5,24,0,0,76,77,5,13,0,0,77,78,3,0,0,0,78,5,1,0,0,0,79,80,5,24,0,0,
-  	80,81,5,7,0,0,81,7,1,0,0,0,82,83,5,24,0,0,83,84,5,8,0,0,84,9,1,0,0,0,
-  	85,86,5,7,0,0,86,87,5,24,0,0,87,11,1,0,0,0,88,89,5,8,0,0,89,90,5,24,0,
-  	0,90,13,1,0,0,0,91,92,5,14,0,0,92,93,5,24,0,0,93,15,1,0,0,0,94,95,5,19,
-  	0,0,95,96,5,1,0,0,96,97,3,2,1,0,97,98,5,2,0,0,98,99,5,9,0,0,99,100,3,
-  	24,12,0,100,101,5,10,0,0,101,115,1,0,0,0,102,103,5,19,0,0,103,104,5,1,
-  	0,0,104,105,3,2,1,0,105,106,5,2,0,0,106,107,5,9,0,0,107,108,3,24,12,0,
-  	108,109,5,10,0,0,109,110,5,20,0,0,110,111,5,9,0,0,111,112,3,24,12,0,112,
-  	113,5,10,0,0,113,115,1,0,0,0,114,94,1,0,0,0,114,102,1,0,0,0,115,17,1,
-  	0,0,0,116,117,5,21,0,0,117,118,5,1,0,0,118,119,3,2,1,0,119,120,5,2,0,
-  	0,120,121,5,9,0,0,121,122,3,24,12,0,122,123,5,10,0,0,123,19,1,0,0,0,124,
-  	125,5,22,0,0,125,126,5,1,0,0,126,127,3,0,0,0,127,128,5,2,0,0,128,21,1,
-  	0,0,0,129,130,3,14,7,0,130,131,5,12,0,0,131,151,1,0,0,0,132,133,3,12,
-  	6,0,133,134,5,12,0,0,134,151,1,0,0,0,135,136,3,10,5,0,136,137,5,12,0,
-  	0,137,151,1,0,0,0,138,139,3,4,2,0,139,140,5,12,0,0,140,151,1,0,0,0,141,
-  	142,3,6,3,0,142,143,5,12,0,0,143,151,1,0,0,0,144,145,3,8,4,0,145,146,
-  	5,12,0,0,146,151,1,0,0,0,147,148,3,20,10,0,148,149,5,12,0,0,149,151,1,
-  	0,0,0,150,129,1,0,0,0,150,132,1,0,0,0,150,135,1,0,0,0,150,138,1,0,0,0,
-  	150,141,1,0,0,0,150,144,1,0,0,0,150,147,1,0,0,0,151,23,1,0,0,0,152,165,
-  	3,16,8,0,153,165,3,18,9,0,154,155,3,18,9,0,155,156,3,24,12,0,156,165,
-  	1,0,0,0,157,158,3,16,8,0,158,159,3,24,12,0,159,165,1,0,0,0,160,161,3,
-  	22,11,0,161,162,3,24,12,0,162,165,1,0,0,0,163,165,3,22,11,0,164,152,1,
-  	0,0,0,164,153,1,0,0,0,164,154,1,0,0,0,164,157,1,0,0,0,164,160,1,0,0,0,
-  	164,163,1,0,0,0,165,25,1,0,0,0,9,38,46,48,62,70,72,114,150,164
+  	0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,3,0,39,8,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,
+  	1,0,1,0,5,0,50,8,0,10,0,12,0,53,9,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+  	1,1,1,1,1,3,1,66,8,1,1,1,1,1,1,1,1,1,1,1,1,1,5,1,74,8,1,10,1,12,1,77,
+  	9,1,1,2,1,2,1,2,1,2,1,3,1,3,1,3,1,4,1,4,1,4,1,5,1,5,1,5,1,6,1,6,1,6,1,
+  	7,1,7,1,7,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,
+  	1,8,1,8,1,8,1,8,1,8,3,8,118,8,8,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,10,
+  	1,10,1,10,1,10,1,10,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,
+  	1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,3,11,154,8,11,
+  	1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,3,12,168,
+  	8,12,1,12,0,2,0,2,13,0,2,4,6,8,10,12,14,16,18,20,22,24,0,0,182,0,38,1,
+  	0,0,0,2,65,1,0,0,0,4,78,1,0,0,0,6,82,1,0,0,0,8,85,1,0,0,0,10,88,1,0,0,
+  	0,12,91,1,0,0,0,14,94,1,0,0,0,16,117,1,0,0,0,18,119,1,0,0,0,20,127,1,
+  	0,0,0,22,153,1,0,0,0,24,167,1,0,0,0,26,27,6,0,-1,0,27,28,5,1,0,0,28,29,
+  	3,0,0,0,29,30,5,2,0,0,30,39,1,0,0,0,31,39,5,25,0,0,32,39,5,16,0,0,33,
+  	39,5,17,0,0,34,39,3,6,3,0,35,39,3,8,4,0,36,39,3,12,6,0,37,39,3,10,5,0,
+  	38,26,1,0,0,0,38,31,1,0,0,0,38,32,1,0,0,0,38,33,1,0,0,0,38,34,1,0,0,0,
+  	38,35,1,0,0,0,38,36,1,0,0,0,38,37,1,0,0,0,39,51,1,0,0,0,40,41,10,10,0,
+  	0,41,42,5,3,0,0,42,50,3,0,0,11,43,44,10,9,0,0,44,45,5,4,0,0,45,50,3,0,
+  	0,10,46,47,10,8,0,0,47,48,5,19,0,0,48,50,3,0,0,9,49,40,1,0,0,0,49,43,
+  	1,0,0,0,49,46,1,0,0,0,50,53,1,0,0,0,51,49,1,0,0,0,51,52,1,0,0,0,52,1,
+  	1,0,0,0,53,51,1,0,0,0,54,55,6,1,-1,0,55,56,3,0,0,0,56,57,5,18,0,0,57,
+  	58,3,0,0,0,58,66,1,0,0,0,59,60,5,7,0,0,60,66,3,2,1,2,61,62,5,1,0,0,62,
+  	63,3,2,1,0,63,64,5,2,0,0,64,66,1,0,0,0,65,54,1,0,0,0,65,59,1,0,0,0,65,
+  	61,1,0,0,0,66,75,1,0,0,0,67,68,10,4,0,0,68,69,5,5,0,0,69,74,3,2,1,5,70,
+  	71,10,3,0,0,71,72,5,6,0,0,72,74,3,2,1,4,73,67,1,0,0,0,73,70,1,0,0,0,74,
+  	77,1,0,0,0,75,73,1,0,0,0,75,76,1,0,0,0,76,3,1,0,0,0,77,75,1,0,0,0,78,
+  	79,5,25,0,0,79,80,5,14,0,0,80,81,3,0,0,0,81,5,1,0,0,0,82,83,5,25,0,0,
+  	83,84,5,8,0,0,84,7,1,0,0,0,85,86,5,25,0,0,86,87,5,9,0,0,87,9,1,0,0,0,
+  	88,89,5,8,0,0,89,90,5,25,0,0,90,11,1,0,0,0,91,92,5,9,0,0,92,93,5,25,0,
+  	0,93,13,1,0,0,0,94,95,5,15,0,0,95,96,5,25,0,0,96,15,1,0,0,0,97,98,5,20,
+  	0,0,98,99,5,1,0,0,99,100,3,2,1,0,100,101,5,2,0,0,101,102,5,10,0,0,102,
+  	103,3,24,12,0,103,104,5,11,0,0,104,118,1,0,0,0,105,106,5,20,0,0,106,107,
+  	5,1,0,0,107,108,3,2,1,0,108,109,5,2,0,0,109,110,5,10,0,0,110,111,3,24,
+  	12,0,111,112,5,11,0,0,112,113,5,21,0,0,113,114,5,10,0,0,114,115,3,24,
+  	12,0,115,116,5,11,0,0,116,118,1,0,0,0,117,97,1,0,0,0,117,105,1,0,0,0,
+  	118,17,1,0,0,0,119,120,5,22,0,0,120,121,5,1,0,0,121,122,3,2,1,0,122,123,
+  	5,2,0,0,123,124,5,10,0,0,124,125,3,24,12,0,125,126,5,11,0,0,126,19,1,
+  	0,0,0,127,128,5,23,0,0,128,129,5,1,0,0,129,130,3,0,0,0,130,131,5,2,0,
+  	0,131,21,1,0,0,0,132,133,3,14,7,0,133,134,5,13,0,0,134,154,1,0,0,0,135,
+  	136,3,12,6,0,136,137,5,13,0,0,137,154,1,0,0,0,138,139,3,10,5,0,139,140,
+  	5,13,0,0,140,154,1,0,0,0,141,142,3,4,2,0,142,143,5,13,0,0,143,154,1,0,
+  	0,0,144,145,3,6,3,0,145,146,5,13,0,0,146,154,1,0,0,0,147,148,3,8,4,0,
+  	148,149,5,13,0,0,149,154,1,0,0,0,150,151,3,20,10,0,151,152,5,13,0,0,152,
+  	154,1,0,0,0,153,132,1,0,0,0,153,135,1,0,0,0,153,138,1,0,0,0,153,141,1,
+  	0,0,0,153,144,1,0,0,0,153,147,1,0,0,0,153,150,1,0,0,0,154,23,1,0,0,0,
+  	155,168,3,16,8,0,156,168,3,18,9,0,157,158,3,18,9,0,158,159,3,24,12,0,
+  	159,168,1,0,0,0,160,161,3,16,8,0,161,162,3,24,12,0,162,168,1,0,0,0,163,
+  	164,3,22,11,0,164,165,3,24,12,0,165,168,1,0,0,0,166,168,3,22,11,0,167,
+  	155,1,0,0,0,167,156,1,0,0,0,167,157,1,0,0,0,167,160,1,0,0,0,167,163,1,
+  	0,0,0,167,166,1,0,0,0,168,25,1,0,0,0,9,38,49,51,65,73,75,117,153,167
   };
   staticData->serializedATN = antlr4::atn::SerializedATNView(serializedATNSegment, sizeof(serializedATNSegment) / sizeof(serializedATNSegment[0]));
 
@@ -299,6 +300,25 @@ std::any mygrammarParser::MulExprContext::accept(tree::ParseTreeVisitor *visitor
   else
     return visitor->visitChildren(this);
 }
+//----------------- DivExprContext ------------------------------------------------------------------
+
+std::vector<mygrammarParser::ExprContext *> mygrammarParser::DivExprContext::expr() {
+  return getRuleContexts<mygrammarParser::ExprContext>();
+}
+
+mygrammarParser::ExprContext* mygrammarParser::DivExprContext::expr(size_t i) {
+  return getRuleContext<mygrammarParser::ExprContext>(i);
+}
+
+mygrammarParser::DivExprContext::DivExprContext(ExprContext *ctx) { copyFrom(ctx); }
+
+
+std::any mygrammarParser::DivExprContext::accept(tree::ParseTreeVisitor *visitor) {
+  if (auto parserVisitor = dynamic_cast<mygrammarVisitor*>(visitor))
+    return parserVisitor->visitDivExpr(this);
+  else
+    return visitor->visitChildren(this);
+}
 //----------------- ParenExprContext ------------------------------------------------------------------
 
 mygrammarParser::ExprContext* mygrammarParser::ParenExprContext::expr() {
@@ -454,7 +474,7 @@ mygrammarParser::ExprContext* mygrammarParser::expr(int precedence) {
       break;
     }
     _ctx->stop = _input->LT(-1);
-    setState(48);
+    setState(51);
     _errHandler->sync(this);
     alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 2, _ctx);
     while (alt != 2 && alt != atn::ATN::INVALID_ALT_NUMBER) {
@@ -462,7 +482,7 @@ mygrammarParser::ExprContext* mygrammarParser::expr(int precedence) {
         if (!_parseListeners.empty())
           triggerExitRuleEvent();
         previousContext = _localctx;
-        setState(46);
+        setState(49);
         _errHandler->sync(this);
         switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 1, _ctx)) {
         case 1: {
@@ -471,24 +491,38 @@ mygrammarParser::ExprContext* mygrammarParser::expr(int precedence) {
           pushNewRecursionContext(newContext, startState, RuleExpr);
           setState(40);
 
-          if (!(precpred(_ctx, 9))) throw FailedPredicateException(this, "precpred(_ctx, 9)");
+          if (!(precpred(_ctx, 10))) throw FailedPredicateException(this, "precpred(_ctx, 10)");
           setState(41);
           match(mygrammarParser::T__2);
           setState(42);
-          expr(10);
+          expr(11);
           break;
         }
 
         case 2: {
-          auto newContext = _tracker.createInstance<AddSubExprContext>(_tracker.createInstance<ExprContext>(parentContext, parentState));
+          auto newContext = _tracker.createInstance<DivExprContext>(_tracker.createInstance<ExprContext>(parentContext, parentState));
           _localctx = newContext;
           pushNewRecursionContext(newContext, startState, RuleExpr);
           setState(43);
 
-          if (!(precpred(_ctx, 8))) throw FailedPredicateException(this, "precpred(_ctx, 8)");
+          if (!(precpred(_ctx, 9))) throw FailedPredicateException(this, "precpred(_ctx, 9)");
           setState(44);
-          match(mygrammarParser::ADDSUB);
+          match(mygrammarParser::T__3);
           setState(45);
+          expr(10);
+          break;
+        }
+
+        case 3: {
+          auto newContext = _tracker.createInstance<AddSubExprContext>(_tracker.createInstance<ExprContext>(parentContext, parentState));
+          _localctx = newContext;
+          pushNewRecursionContext(newContext, startState, RuleExpr);
+          setState(46);
+
+          if (!(precpred(_ctx, 8))) throw FailedPredicateException(this, "precpred(_ctx, 8)");
+          setState(47);
+          match(mygrammarParser::ADDSUB);
+          setState(48);
           expr(9);
           break;
         }
@@ -497,7 +531,7 @@ mygrammarParser::ExprContext* mygrammarParser::expr(int precedence) {
           break;
         } 
       }
-      setState(50);
+      setState(53);
       _errHandler->sync(this);
       alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 2, _ctx);
     }
@@ -642,7 +676,7 @@ mygrammarParser::Bool_exprContext* mygrammarParser::bool_expr(int precedence) {
   try {
     size_t alt;
     enterOuterAlt(_localctx, 1);
-    setState(62);
+    setState(65);
     _errHandler->sync(this);
     switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 3, _ctx)) {
     case 1: {
@@ -650,11 +684,11 @@ mygrammarParser::Bool_exprContext* mygrammarParser::bool_expr(int precedence) {
       _ctx = _localctx;
       previousContext = _localctx;
 
-      setState(52);
+      setState(55);
       expr(0);
-      setState(53);
+      setState(56);
       match(mygrammarParser::COMP);
-      setState(54);
+      setState(57);
       expr(0);
       break;
     }
@@ -663,9 +697,9 @@ mygrammarParser::Bool_exprContext* mygrammarParser::bool_expr(int precedence) {
       _localctx = _tracker.createInstance<NotExprContext>(_localctx);
       _ctx = _localctx;
       previousContext = _localctx;
-      setState(56);
-      match(mygrammarParser::T__5);
-      setState(57);
+      setState(59);
+      match(mygrammarParser::T__6);
+      setState(60);
       bool_expr(2);
       break;
     }
@@ -674,11 +708,11 @@ mygrammarParser::Bool_exprContext* mygrammarParser::bool_expr(int precedence) {
       _localctx = _tracker.createInstance<ParenBoolExprContext>(_localctx);
       _ctx = _localctx;
       previousContext = _localctx;
-      setState(58);
+      setState(61);
       match(mygrammarParser::T__0);
-      setState(59);
+      setState(62);
       bool_expr(0);
-      setState(60);
+      setState(63);
       match(mygrammarParser::T__1);
       break;
     }
@@ -687,7 +721,7 @@ mygrammarParser::Bool_exprContext* mygrammarParser::bool_expr(int precedence) {
       break;
     }
     _ctx->stop = _input->LT(-1);
-    setState(72);
+    setState(75);
     _errHandler->sync(this);
     alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 5, _ctx);
     while (alt != 2 && alt != atn::ATN::INVALID_ALT_NUMBER) {
@@ -695,19 +729,19 @@ mygrammarParser::Bool_exprContext* mygrammarParser::bool_expr(int precedence) {
         if (!_parseListeners.empty())
           triggerExitRuleEvent();
         previousContext = _localctx;
-        setState(70);
+        setState(73);
         _errHandler->sync(this);
         switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 4, _ctx)) {
         case 1: {
           auto newContext = _tracker.createInstance<AndExprContext>(_tracker.createInstance<Bool_exprContext>(parentContext, parentState));
           _localctx = newContext;
           pushNewRecursionContext(newContext, startState, RuleBool_expr);
-          setState(64);
+          setState(67);
 
           if (!(precpred(_ctx, 4))) throw FailedPredicateException(this, "precpred(_ctx, 4)");
-          setState(65);
-          match(mygrammarParser::T__3);
-          setState(66);
+          setState(68);
+          match(mygrammarParser::T__4);
+          setState(69);
           bool_expr(5);
           break;
         }
@@ -716,12 +750,12 @@ mygrammarParser::Bool_exprContext* mygrammarParser::bool_expr(int precedence) {
           auto newContext = _tracker.createInstance<OrExprContext>(_tracker.createInstance<Bool_exprContext>(parentContext, parentState));
           _localctx = newContext;
           pushNewRecursionContext(newContext, startState, RuleBool_expr);
-          setState(67);
+          setState(70);
 
           if (!(precpred(_ctx, 3))) throw FailedPredicateException(this, "precpred(_ctx, 3)");
-          setState(68);
-          match(mygrammarParser::T__4);
-          setState(69);
+          setState(71);
+          match(mygrammarParser::T__5);
+          setState(72);
           bool_expr(4);
           break;
         }
@@ -730,7 +764,7 @@ mygrammarParser::Bool_exprContext* mygrammarParser::bool_expr(int precedence) {
           break;
         } 
       }
-      setState(74);
+      setState(77);
       _errHandler->sync(this);
       alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 5, _ctx);
     }
@@ -795,11 +829,11 @@ mygrammarParser::AssignmentContext* mygrammarParser::assignment() {
   try {
     _localctx = _tracker.createInstance<mygrammarParser::AssignExprContext>(_localctx);
     enterOuterAlt(_localctx, 1);
-    setState(75);
+    setState(78);
     match(mygrammarParser::NAME);
-    setState(76);
+    setState(79);
     match(mygrammarParser::ASSIGN);
-    setState(77);
+    setState(80);
     expr(0);
    
   }
@@ -856,10 +890,10 @@ mygrammarParser::IncrementContext* mygrammarParser::increment() {
   try {
     _localctx = _tracker.createInstance<mygrammarParser::PostIncContext>(_localctx);
     enterOuterAlt(_localctx, 1);
-    setState(79);
+    setState(82);
     match(mygrammarParser::NAME);
-    setState(80);
-    match(mygrammarParser::T__6);
+    setState(83);
+    match(mygrammarParser::T__7);
    
   }
   catch (RecognitionException &e) {
@@ -915,10 +949,10 @@ mygrammarParser::DecrementContext* mygrammarParser::decrement() {
   try {
     _localctx = _tracker.createInstance<mygrammarParser::PostDecContext>(_localctx);
     enterOuterAlt(_localctx, 1);
-    setState(82);
+    setState(85);
     match(mygrammarParser::NAME);
-    setState(83);
-    match(mygrammarParser::T__7);
+    setState(86);
+    match(mygrammarParser::T__8);
    
   }
   catch (RecognitionException &e) {
@@ -974,9 +1008,9 @@ mygrammarParser::Front_incrementContext* mygrammarParser::front_increment() {
   try {
     _localctx = _tracker.createInstance<mygrammarParser::PreIncContext>(_localctx);
     enterOuterAlt(_localctx, 1);
-    setState(85);
-    match(mygrammarParser::T__6);
-    setState(86);
+    setState(88);
+    match(mygrammarParser::T__7);
+    setState(89);
     match(mygrammarParser::NAME);
    
   }
@@ -1033,9 +1067,9 @@ mygrammarParser::Front_decrementContext* mygrammarParser::front_decrement() {
   try {
     _localctx = _tracker.createInstance<mygrammarParser::PreDecContext>(_localctx);
     enterOuterAlt(_localctx, 1);
-    setState(88);
-    match(mygrammarParser::T__7);
-    setState(89);
+    setState(91);
+    match(mygrammarParser::T__8);
+    setState(92);
     match(mygrammarParser::NAME);
    
   }
@@ -1096,9 +1130,9 @@ mygrammarParser::InitContext* mygrammarParser::init() {
   try {
     _localctx = _tracker.createInstance<mygrammarParser::VarDeclContext>(_localctx);
     enterOuterAlt(_localctx, 1);
-    setState(91);
+    setState(94);
     match(mygrammarParser::TYPE);
-    setState(92);
+    setState(95);
     match(mygrammarParser::NAME);
    
   }
@@ -1192,54 +1226,54 @@ mygrammarParser::Operator_ifContext* mygrammarParser::operator_if() {
     exitRule();
   });
   try {
-    setState(114);
+    setState(117);
     _errHandler->sync(this);
     switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 6, _ctx)) {
     case 1: {
       _localctx = _tracker.createInstance<mygrammarParser::IfStmtContext>(_localctx);
       enterOuterAlt(_localctx, 1);
-      setState(94);
-      match(mygrammarParser::IF);
-      setState(95);
-      match(mygrammarParser::T__0);
-      setState(96);
-      bool_expr(0);
       setState(97);
-      match(mygrammarParser::T__1);
+      match(mygrammarParser::IF);
       setState(98);
-      match(mygrammarParser::T__8);
+      match(mygrammarParser::T__0);
       setState(99);
-      code();
+      bool_expr(0);
       setState(100);
+      match(mygrammarParser::T__1);
+      setState(101);
       match(mygrammarParser::T__9);
+      setState(102);
+      code();
+      setState(103);
+      match(mygrammarParser::T__10);
       break;
     }
 
     case 2: {
       _localctx = _tracker.createInstance<mygrammarParser::IfElseStmtContext>(_localctx);
       enterOuterAlt(_localctx, 2);
-      setState(102);
-      match(mygrammarParser::IF);
-      setState(103);
-      match(mygrammarParser::T__0);
-      setState(104);
-      bool_expr(0);
       setState(105);
-      match(mygrammarParser::T__1);
+      match(mygrammarParser::IF);
       setState(106);
-      match(mygrammarParser::T__8);
+      match(mygrammarParser::T__0);
       setState(107);
-      code();
+      bool_expr(0);
       setState(108);
-      match(mygrammarParser::T__9);
+      match(mygrammarParser::T__1);
       setState(109);
-      match(mygrammarParser::ELSE);
-      setState(110);
-      match(mygrammarParser::T__8);
-      setState(111);
-      code();
-      setState(112);
       match(mygrammarParser::T__9);
+      setState(110);
+      code();
+      setState(111);
+      match(mygrammarParser::T__10);
+      setState(112);
+      match(mygrammarParser::ELSE);
+      setState(113);
+      match(mygrammarParser::T__9);
+      setState(114);
+      code();
+      setState(115);
+      match(mygrammarParser::T__10);
       break;
     }
 
@@ -1309,20 +1343,20 @@ mygrammarParser::Cycle_whileContext* mygrammarParser::cycle_while() {
   try {
     _localctx = _tracker.createInstance<mygrammarParser::WhileStmtContext>(_localctx);
     enterOuterAlt(_localctx, 1);
-    setState(116);
-    match(mygrammarParser::WHILE);
-    setState(117);
-    match(mygrammarParser::T__0);
-    setState(118);
-    bool_expr(0);
     setState(119);
-    match(mygrammarParser::T__1);
+    match(mygrammarParser::WHILE);
     setState(120);
-    match(mygrammarParser::T__8);
+    match(mygrammarParser::T__0);
     setState(121);
-    code();
+    bool_expr(0);
     setState(122);
+    match(mygrammarParser::T__1);
+    setState(123);
     match(mygrammarParser::T__9);
+    setState(124);
+    code();
+    setState(125);
+    match(mygrammarParser::T__10);
    
   }
   catch (RecognitionException &e) {
@@ -1382,13 +1416,13 @@ mygrammarParser::Print_Context* mygrammarParser::print_() {
   try {
     _localctx = _tracker.createInstance<mygrammarParser::PrintContext>(_localctx);
     enterOuterAlt(_localctx, 1);
-    setState(124);
-    match(mygrammarParser::PRINT);
-    setState(125);
-    match(mygrammarParser::T__0);
-    setState(126);
-    expr(0);
     setState(127);
+    match(mygrammarParser::PRINT);
+    setState(128);
+    match(mygrammarParser::T__0);
+    setState(129);
+    expr(0);
+    setState(130);
     match(mygrammarParser::T__1);
    
   }
@@ -1561,15 +1595,15 @@ mygrammarParser::LineContext* mygrammarParser::line() {
     exitRule();
   });
   try {
-    setState(150);
+    setState(153);
     _errHandler->sync(this);
     switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 7, _ctx)) {
     case 1: {
       _localctx = _tracker.createInstance<mygrammarParser::DeclLineContext>(_localctx);
       enterOuterAlt(_localctx, 1);
-      setState(129);
+      setState(132);
       init();
-      setState(130);
+      setState(133);
       match(mygrammarParser::SEP);
       break;
     }
@@ -1577,9 +1611,9 @@ mygrammarParser::LineContext* mygrammarParser::line() {
     case 2: {
       _localctx = _tracker.createInstance<mygrammarParser::PreDecLineContext>(_localctx);
       enterOuterAlt(_localctx, 2);
-      setState(132);
+      setState(135);
       front_decrement();
-      setState(133);
+      setState(136);
       match(mygrammarParser::SEP);
       break;
     }
@@ -1587,9 +1621,9 @@ mygrammarParser::LineContext* mygrammarParser::line() {
     case 3: {
       _localctx = _tracker.createInstance<mygrammarParser::PreIncLineContext>(_localctx);
       enterOuterAlt(_localctx, 3);
-      setState(135);
+      setState(138);
       front_increment();
-      setState(136);
+      setState(139);
       match(mygrammarParser::SEP);
       break;
     }
@@ -1597,9 +1631,9 @@ mygrammarParser::LineContext* mygrammarParser::line() {
     case 4: {
       _localctx = _tracker.createInstance<mygrammarParser::AssignLineContext>(_localctx);
       enterOuterAlt(_localctx, 4);
-      setState(138);
+      setState(141);
       assignment();
-      setState(139);
+      setState(142);
       match(mygrammarParser::SEP);
       break;
     }
@@ -1607,9 +1641,9 @@ mygrammarParser::LineContext* mygrammarParser::line() {
     case 5: {
       _localctx = _tracker.createInstance<mygrammarParser::PostIncLineContext>(_localctx);
       enterOuterAlt(_localctx, 5);
-      setState(141);
+      setState(144);
       increment();
-      setState(142);
+      setState(145);
       match(mygrammarParser::SEP);
       break;
     }
@@ -1617,9 +1651,9 @@ mygrammarParser::LineContext* mygrammarParser::line() {
     case 6: {
       _localctx = _tracker.createInstance<mygrammarParser::PostDecLineContext>(_localctx);
       enterOuterAlt(_localctx, 6);
-      setState(144);
+      setState(147);
       decrement();
-      setState(145);
+      setState(148);
       match(mygrammarParser::SEP);
       break;
     }
@@ -1627,9 +1661,9 @@ mygrammarParser::LineContext* mygrammarParser::line() {
     case 7: {
       _localctx = _tracker.createInstance<mygrammarParser::PrintLineContext>(_localctx);
       enterOuterAlt(_localctx, 7);
-      setState(147);
+      setState(150);
       print_();
-      setState(148);
+      setState(151);
       match(mygrammarParser::SEP);
       break;
     }
@@ -1777,13 +1811,13 @@ mygrammarParser::CodeContext* mygrammarParser::code() {
     exitRule();
   });
   try {
-    setState(164);
+    setState(167);
     _errHandler->sync(this);
     switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 8, _ctx)) {
     case 1: {
       _localctx = _tracker.createInstance<mygrammarParser::IfOnlyContext>(_localctx);
       enterOuterAlt(_localctx, 1);
-      setState(152);
+      setState(155);
       operator_if();
       break;
     }
@@ -1791,7 +1825,7 @@ mygrammarParser::CodeContext* mygrammarParser::code() {
     case 2: {
       _localctx = _tracker.createInstance<mygrammarParser::WhileOnlyContext>(_localctx);
       enterOuterAlt(_localctx, 2);
-      setState(153);
+      setState(156);
       cycle_while();
       break;
     }
@@ -1799,9 +1833,9 @@ mygrammarParser::CodeContext* mygrammarParser::code() {
     case 3: {
       _localctx = _tracker.createInstance<mygrammarParser::WhileWithCodeContext>(_localctx);
       enterOuterAlt(_localctx, 3);
-      setState(154);
+      setState(157);
       cycle_while();
-      setState(155);
+      setState(158);
       code();
       break;
     }
@@ -1809,9 +1843,9 @@ mygrammarParser::CodeContext* mygrammarParser::code() {
     case 4: {
       _localctx = _tracker.createInstance<mygrammarParser::IfWithCodeContext>(_localctx);
       enterOuterAlt(_localctx, 4);
-      setState(157);
+      setState(160);
       operator_if();
-      setState(158);
+      setState(161);
       code();
       break;
     }
@@ -1819,9 +1853,9 @@ mygrammarParser::CodeContext* mygrammarParser::code() {
     case 5: {
       _localctx = _tracker.createInstance<mygrammarParser::LineWithCodeContext>(_localctx);
       enterOuterAlt(_localctx, 5);
-      setState(160);
+      setState(163);
       line();
-      setState(161);
+      setState(164);
       code();
       break;
     }
@@ -1829,7 +1863,7 @@ mygrammarParser::CodeContext* mygrammarParser::code() {
     case 6: {
       _localctx = _tracker.createInstance<mygrammarParser::SingleLineContext>(_localctx);
       enterOuterAlt(_localctx, 6);
-      setState(163);
+      setState(166);
       line();
       break;
     }
@@ -1861,8 +1895,9 @@ bool mygrammarParser::sempred(RuleContext *context, size_t ruleIndex, size_t pre
 
 bool mygrammarParser::exprSempred(ExprContext *_localctx, size_t predicateIndex) {
   switch (predicateIndex) {
-    case 0: return precpred(_ctx, 9);
-    case 1: return precpred(_ctx, 8);
+    case 0: return precpred(_ctx, 10);
+    case 1: return precpred(_ctx, 9);
+    case 2: return precpred(_ctx, 8);
 
   default:
     break;
@@ -1872,8 +1907,8 @@ bool mygrammarParser::exprSempred(ExprContext *_localctx, size_t predicateIndex)
 
 bool mygrammarParser::bool_exprSempred(Bool_exprContext *_localctx, size_t predicateIndex) {
   switch (predicateIndex) {
-    case 2: return precpred(_ctx, 4);
-    case 3: return precpred(_ctx, 3);
+    case 3: return precpred(_ctx, 4);
+    case 4: return precpred(_ctx, 3);
 
   default:
     break;

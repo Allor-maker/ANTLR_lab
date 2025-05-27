@@ -22,6 +22,7 @@ NAME : [A-Za-z]+;
 expr 
     : '(' expr ')'                             #parenExpr
     | expr '*' expr                            #mulExpr
+    | expr '/' expr                            #divExpr
     | expr ADDSUB expr                         #addSubExpr
     | NAME                                     #nameExpr
     | INT                                      #intExpr

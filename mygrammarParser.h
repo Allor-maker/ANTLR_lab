@@ -13,9 +13,9 @@ class  mygrammarParser : public antlr4::Parser {
 public:
   enum {
     T__0 = 1, T__1 = 2, T__2 = 3, T__3 = 4, T__4 = 5, T__5 = 6, T__6 = 7, 
-    T__7 = 8, T__8 = 9, T__9 = 10, WS = 11, SEP = 12, ASSIGN = 13, TYPE = 14, 
-    INT = 15, FLOAT = 16, COMP = 17, ADDSUB = 18, IF = 19, ELSE = 20, WHILE = 21, 
-    PRINT = 22, DEF = 23, NAME = 24
+    T__7 = 8, T__8 = 9, T__9 = 10, T__10 = 11, WS = 12, SEP = 13, ASSIGN = 14, 
+    TYPE = 15, INT = 16, FLOAT = 17, COMP = 18, ADDSUB = 19, IF = 20, ELSE = 21, 
+    WHILE = 22, PRINT = 23, DEF = 24, NAME = 25
   };
 
   enum {
@@ -128,6 +128,16 @@ public:
   class  MulExprContext : public ExprContext {
   public:
     MulExprContext(ExprContext *ctx);
+
+    std::vector<ExprContext *> expr();
+    ExprContext* expr(size_t i);
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
+  };
+
+  class  DivExprContext : public ExprContext {
+  public:
+    DivExprContext(ExprContext *ctx);
 
     std::vector<ExprContext *> expr();
     ExprContext* expr(size_t i);

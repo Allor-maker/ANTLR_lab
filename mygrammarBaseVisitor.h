@@ -382,5 +382,31 @@ public:
         visit(ctx->cycle_while());
         return visit(ctx->code());
     }
+    virtual std::any visitDivExpr(mygrammarParser::DivExprContext* ctx) override {
+        auto left = std::any_cast<std::variant<int, float>>(visit(ctx->expr(0)));
+        auto right = std::any_cast<std::variant<int, float>>(visit(ctx->expr(1)));
+
+        std::variant<int, float> result;
+
+        if (std::holds_alternative<int>(left) && std::holds_alternative<int>(right))
+        {
+            int l = std::get<int>(left);
+            int r = std::get<int>(right);
+
+            if (r == 0)
+                throw std::runtime_error("Division by zero.");
+
+            result = static_cast<float>(l) / r;
+        }
+        else
+        {
+            float l = std::holds_alternative<int>(left) ? static_cast<float>(std::get<int>(left)) : std::get<float>(left);
+            float r = std::holds_alternative<int>(right) ? static_cast<float>(std::get<int>(right)) : std::get<float>(right);
+            if (std::fabs(r) < 1e-6)
+                throw std::runtime_error("Division by zero.");
+            result = l / r;
+        }
+        return result;
+    }
 };
 
